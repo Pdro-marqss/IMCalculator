@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>IMCalculator | Calculo de IMC</title>
+
+</head>
+<body>
+    
+    <main>
+        <header>
+            <h1>IMCalculator</h1>
+        </header>
+
+        <div class="container">
+            <div class="left-side">
+                <img src="./images/doctors-medicine.svg" alt="Illustração">
+                <p>Calcule seu <span class="imc">IMC</span> <br>de forma <span class="fast-simple">rápida</span> e <span class="fast-simple">simples</span>.</p>
+            </div>
+
+            <div class="right-side">
+                <form>
+                    <div class="input">
+                        <label>Nome</label>
+                        <input type="text" id="nome">
+                    </div>
+            
+                    <div class="input">
+                        <label>Altura</label>
+                        <input type="number" id="altura">
+                    </div>
+            
+                    <div class="input">
+                        <label>Peso</label>
+                        <input type="number" id="peso">
+                    </div>
+            
+                    <div class="input">
+                        <label>Resultado</label>
+                        <div class="result" id="resultado"></div>
+                    </div>
+
+                    <button id="calcular" type="button">Calcular</button>
+                    <!-- BUG RESOLVIDO: Por padrão o type do botao vem como submit, assim ao clicar no botao o evento acontece e logo depois a pagina é recarregada e o conteudo que deveria ficar escrito some. Com type button isso não acontece. -->
+                </form>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+<!--  
+    <form>
+        <div class="input">
+            <label>Nome</label>
+            <input type="text" id="nome">
+        </div>
+
+        <div class="input">
+            <label>Altura</label>
+            <input type="number" id="altura">
+        </div>
+
+        <div class="input">
+            <label>Peso</label>
+            <input type="number" id="peso">
+        </div>
+
+        <div class="input">
+            <label>Resultado</label>
+            <div class="resultado" id="resultado"></div>
+        </div>
+
+        -- <div class="resultado" id="resultado"></div> --
+
+        <button id="calcular">Calcular</button>
+    </form>
+        -->
+
+    <script type="text/javascript" src="./js/imc.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+/* Thin-100/Light-300/Regular-400/Medium-500/Bold-700 */
+
+:root {
+    --main-red: #FF5F5F;
+    --input-grey: #EEEEEE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    color: var(--main-red);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.container {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+/* Lado esquerdo */
+.left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-side img {
+    max-width: 400px;
+}
+
+.left-side p {
+    color: #373737;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 32px;
+    text-align: center;
+
+    margin-top: 30px;
+}
+
+.imc,.fast-simple {
+    color: var(--main-red);
+    font-weight: 700;
+}
+
+
+/* Lado direito */
+label,input,button {
+    display: block;
+}
+
+form {
+    width: 300px;
+}
+
+.input {
+    margin: 20px 0;
+}
+
+.input label {
+    color: #616161;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 1px;
+
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    padding: 13px 13px;
+    border: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.336);
+}
+input:focus {
+    outline: none;
+    box-shadow: 0 0 4px #FF5F5F;
+}
+
+/* TIRA AS SETA DE COMANDO DO INPUT NUMBER */
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+/* --- */
+
+.result {
+    width: 100%;
+    height: 90px;
+
+    background-color: var(--input-grey);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.336);
+
+
+    padding: 15px 15px;
+
+    color: rgb(107, 107, 107);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+button {
+    width: 100%;
+    
+    padding: 18px 0;
+
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+
+    border: none;
+
+    background-color: var(--main-red);
+}
+
+
+/* Responsivo */
+@media screen and (max-width: 850px) {
+    .container {
+        justify-content: space-around;
+    }
+    .left-side img {
+        max-width: 350px;
+    }
+    form {
+        width: 250px;
+    }
+    .input {
+        margin: 15px 0;
+    }
+    input {
+        padding: 12px 12px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+    .left-side img {
+        width: 190px;
+        margin-top: -10px;
+    }
+    .left-side p {
+        font-size: 18px;
+        line-height: 28px;
+    
+        margin-top: 20px;
+        margin-bottom: 20px;
+    
+    }
+}
